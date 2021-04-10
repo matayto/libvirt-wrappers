@@ -13,5 +13,4 @@ Note that the sample unattended configurations used for initrd injection (kickst
 
 ## TODO
 
-1. virt-clone setup
-
+1. RHEL8 example
