@@ -7,7 +7,6 @@ iso_url="https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/${iso_name}"
 vm_name="debian10-base"
 vm_disk="20G"
 os_variant="debian10"
-vnc_port="5902"
 
 get_iso "${iso_url}" "${iso_name}"
 create_vm_fs "${vm_name}" "${vm_disk}"
@@ -23,7 +22,7 @@ else
               --disk path="${vms_dir}/${vm_name}/${vm_name}.qcow2",bus=virtio,cache=none \
               --os-type "linux" \
               --os-variant "${os_variant}" \
-              --graphics "vnc,listen=127.0.0.1,port=${vnc_port}" \
+              --graphics "vnc,listen=127.0.0.1," \
               --location "${iso_dir}/${iso_name}" \
               --noautoconsole \
               --initrd-inject=unattended/preseed.cfg

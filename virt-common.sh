@@ -3,7 +3,8 @@
 vms_dir="/var/lib/libvirt/images"
 iso_dir="${vms_dir}/iso"
 # run ./virt-prep-bridge.sh to configure bridging, otherwise use 'default' here
-vm_network="host-bridge"
+#vm_network="host-bridge"
+vm_network="default"
 
 if ! [ -d "${iso_dir}" ]; then
   sudo mkdir -v "${iso_dir}"
